@@ -2,24 +2,37 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
+set runtimepath+=~/.vim/ultisnips_rep 
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
 "Github bundles
-Bundle 'scrooloose/nerdtree'
-Bundle 'walm/jshint'
-Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
-Bundle "git://github.com/MarcWeber/vim-addon-mw-utils.git"
-Bundle "git://github.com/tomtom/tlib_vim.git"
-Bundle "git://github.com/honza/snipmate-snippets.git"
-Bundle "git://github.com/garbas/snipmate.vim.git"
-Bundle "git://github.com/Lokaltog/vim-easymotion.git"
-Bundle "git://github.com/majutsushi/tagbar.git"
+Bundle 'https://github.com/ervandew/supertab.git'
+Bundle 'https://github.com/sjl/gundo.vim.git'
+Bundle 'https://github.com/mileszs/ack.vim.git'
+Bundle 'https://github.com/skammer/vim-css-color.git'
+Bundle 'https://github.com/tomtom/tcomment_vim.git'
+Bundle 'https://github.com/Shougo/neocomplcache.git'
+Bundle 'https://github.com/rygwdn/ultisnips.git'
+Bundle 'https://github.com/tpope/vim-unimpaired.git'
+Bundle 'https://github.com/tpope/vim-fugitive.git'
+Bundle 'https://github.com/jiangmiao/simple-javascript-indenter.git'
+Bundle 'https://github.com/roman/golden-ratio.git'
+Bundle 'https://github.com/flazz/vim-colorschemes.git'
+Bundle 'https://github.com/wookiehangover/jshint.vim.git'
 
 "Vim-scripts bundels
 Bundle 'jsbeautify'
+Bundle 'ZoomWin'
+Bundle 'Rainbow-Parenthesis'
+Bundle 'TaskList.vim'
+Bundle 'compview'
+Bundle 'VimExplorer'
+Bundle 'vimwiki'
+Bundle 'Conque-Shell'
+Bundle 'Obvious-Mode'
+Bundle 'calendar.vim--Matsumoto'
 
 "FileType
 set filetype=on
@@ -32,6 +45,8 @@ set sts=4
 set et
 set textwidth=79
 set number
+syntax on 
+colorscheme inkpot
 
 "HTML FileType settings
 autocmd FileType html set sw=2
@@ -61,6 +76,6 @@ autocmd FileType javascript set sts=4
 autocmd FileType javascript set textwidth=79
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
-"NERDTree Settings
-"Map NERDTree to \p
-nmap <silent> <leader>p :NERDTreeToggle<CR>
+let g:neocomplcache_enable_at_startup = 1 
+let g:neocomplcache_enable_smart_case = 1 
+
